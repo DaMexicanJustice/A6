@@ -39,4 +39,4 @@ We will use this to play sound utilizing our speakers.
 
 ### App demonstration audio recording & playing
 
-...App goes here
+...Code examples goes here
