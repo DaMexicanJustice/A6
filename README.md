@@ -102,4 +102,6 @@ Android has a list of "dangerous permissions" which pose a security risk to the 
 10. Manifest.permission.READ_EXTERNAL_STORAGE	Read external or SD
 11. Manifest.permission.WRITE_EXTERNAL_STORAGE
 
+When dealing with these we need to have the user give us permission to access the feature at run-time. 
+
 Code example goes here....
