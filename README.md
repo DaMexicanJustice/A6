@@ -62,6 +62,7 @@ If your player application needs to keep the screen from dimming or the processo
 [MediaRecorder](https://developer.android.com/guide/topics/media/mediarecorder.html) is a framework that allows us to record audio utilizing the microphone of our smart phones. 
 
 ### App demonstration audio recording & playing
-
-  val mediaPlayer = MediaPlayer.create(this, R.raw.bomberman)
-  mediaPlayer.start()
+```
+val mediaPlayer = MediaPlayer.create(this, R.raw.bomberman)
+mediaPlayer.start()
+```
