@@ -1,23 +1,29 @@
 package dk.cphbusiness.template
 
 import android.app.Activity
-import android.content.Intent
 import android.media.MediaPlayer
+import android.media.MediaRecorder
 import android.media.RingtoneManager
 import android.os.Bundle
-import android.view.View
+import android.os.Environment
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.onClick
+import java.io.File
+
 
 class MainActivity : Activity() {
 
     lateinit var mp : MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        message.text = "A Kotlin Activity"
         toastButton.onClick { startMusic()}
+        playSMSButton.onClick { startRingtone() }
+        killButton.onClick { mp.stop() }
+        recordingButton.onClick { startRecording() }
+
         }
 
     fun startMusic() {
@@ -25,12 +31,8 @@ class MainActivity : Activity() {
         mp.start()
     }
 
-    fun showJavaClicked(view: View) {
-        startActivity(Intent(this, JavaActivity::class.java))
-        }
-
     fun startRingtone() {
-        val ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+        val ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE)
         mp = MediaPlayer.create(this, ringtoneUri)
         mp.start()
     }
@@ -39,6 +41,20 @@ class MainActivity : Activity() {
         mp = MediaPlayer()
         val path = android.os.Environment.getExternalStorageDirectory()
         mp.setDataSource(path.toString() + "urmp3filename")
+    }
+
+    fun startRecording() {
+        val dir = Environment.getExternalStorageDirectory()
+
+        val audioFile = File.createTempFile("sound", ".3gp", dir)
+
+        val recorder = MediaRecorder()
+        recorder.setAudioSource(MediaRecorder.AudioSource.MIC)
+        recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
+        recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
+        recorder.setOutputFile(audioFile.absolutePath)
+        recorder.prepare();
+        recorder.start();
     }
 
     }

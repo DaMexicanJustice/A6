@@ -11,7 +11,7 @@
     tools:context="dk.cphbusiness.template.MainActivity">
 
     <TextView
-        android:id="@+id/message"
+        android:id="@+id/playing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -19,23 +19,50 @@
         android:text="Playing Audio Demo"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/recording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="Playing Audio Demo"
+        android:textSize="24sp" />
+
     <Button
         android:id="@+id/toastButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/message"
+        android:layout_below="@+id/playing"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="Start Music" />
+        android:text="Play Music" />
 
     <Button
-        android:id="@+id/showJavaButton"
-        android:text="Show Java Activity"
+        android:id="@+id/playSMSButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toastButton"
-        android:layout_marginTop="24dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
         android:onClick="showJavaClicked"
-        />
+        android:text="Play SMS tone" />
+
+    <Button
+        android:id="@+id/killButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Kill Audio" />
+
+    <Button
+        android:id="@+id/recordingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playing"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
+        android:text="Start Recording" />
+
 </RelativeLayout>
