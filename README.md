@@ -3,6 +3,8 @@
 Patrick Johansen, Joachim Christensen
 ## Playing sound
 
+* We will need to do some Kotlin refactoring together on our code examples to improve them. We tried to get the code blocks as Kotlin-like as possible. 
+
 ### Defining sound
 First of all whenever we work with digital sound it's called audio. Sound indicates that it is analogue (which is defined as sound which is 1 : 1 scale in relation to its source). So all sound we hear coming from biological sources such as rivers, animals etc. is considered sound, whereas a digital recreation of an analogue source is called audio. Everything you hear coming from speakers is audio.
 
@@ -62,7 +64,13 @@ If your player application needs to keep the screen from dimming or the processo
 [MediaRecorder](https://developer.android.com/guide/topics/media/mediarecorder.html) is a framework that allows us to record audio utilizing the microphone of our smart phones. 
 
 ### App demonstration audio recording & playing
+
+#### Using Media Player to play audio from raw directory
+Navigate to your res directory and add a new folder 'raw' and add an MP3 file of your choosing to the raw directory. File must be all lowercase and include .fileformat eg: bomberman.mp3
+
 ```
 val mediaPlayer = MediaPlayer.create(this, R.raw.bomberman)
 mediaPlayer.start()
 ```
+
+#### 
