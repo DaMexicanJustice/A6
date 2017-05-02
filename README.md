@@ -63,5 +63,5 @@ If your player application needs to keep the screen from dimming or the processo
 
 ### App demonstration audio recording & playing
 
-`val mediaPlayer = MediaPlayer.create(this, R.raw.bomberman)
-mediaPlayer.start()`
+  val mediaPlayer = MediaPlayer.create(this, R.raw.bomberman)
+  mediaPlayer.start()
