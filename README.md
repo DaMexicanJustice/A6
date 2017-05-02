@@ -36,10 +36,10 @@ We will use this to play sound utilizing our speakers.
 #### What we need
 The following classes are used to play sound and video in the Android framework:
 
-MediaPlayer
+#####MediaPlayer
 This class is the primary API for playing sound and video.
 
-AudioManager
+#####AudioManager
 This class manages audio sources and audio output on a device
 
 ### MediaRecorder
