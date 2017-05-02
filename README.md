@@ -42,6 +42,21 @@ This class is the primary API for playing sound and video.
 ##### AudioManager
 This class manages audio sources and audio output on a device
 
+##### Manifest declarations
+Before starting development on your application using MediaPlayer, make sure your manifest has the appropriate declarations to allow use of related features.
+
+Internet Permission - 
+
+If you are using MediaPlayer to stream network-based content, your application must request network access.
+
+`<uses-permission android:name="android.permission.INTERNET" />`
+
+Wake Lock Permission - 
+
+If your player application needs to keep the screen from dimming or the processor from sleeping, or uses the MediaPlayer.setScreenOnWhilePlaying() or MediaPlayer.setWakeMode() methods, you must request this permission.
+
+`<uses-permission android:name="android.permission.WAKE_LOCK" />`
+
 ### MediaRecorder
 
 [MediaRecorder](https://developer.android.com/guide/topics/media/mediarecorder.html) is a framework that allows us to record audio utilizing the microphone of our smart phones. 
