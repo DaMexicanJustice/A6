@@ -38,6 +38,7 @@ The following classes are used to play sound and video in the Android framework:
 
 MediaPlayer
 This class is the primary API for playing sound and video.
+
 AudioManager
 This class manages audio sources and audio output on a device
 
