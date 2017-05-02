@@ -15,5 +15,7 @@ The way an ADC works is fairly complex. There are a few different ways to achiev
 
 Keywords:
 1. Sampling rate
-2. 
+2. Resolution
+3. ADC
+4. DAC
 
