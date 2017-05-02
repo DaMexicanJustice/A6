@@ -2,11 +2,16 @@ package dk.cphbusiness.template;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.io.File;
+import java.io.IOException;
 
 public class JavaActivity extends Activity {
 
@@ -22,11 +27,7 @@ public class JavaActivity extends Activity {
         toastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(
-                        JavaActivity.this,
-                        "Toast button pressed",
-                        Toast.LENGTH_LONG
-                        ).show();
+                startRingtone();
                 }
             } );
         }
@@ -35,5 +36,22 @@ public class JavaActivity extends Activity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         }
+
+    public void startMusicRaw() {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.bomberman);
+        mediaPlayer.start();
+    }
+
+    public void startRingtone() {
+        Uri ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        MediaPlayer mp = MediaPlayer.create(this, ringtoneUri);
+        mp.start();
+    }
+
+    public void startMusicSD() throws IOException {
+        MediaPlayer mediaPlayer = new MediaPlayer();
+        File path = android.os.Environment.getExternalStorageDirectory();
+        mediaPlayer.setDataSource(path + "urmp3filename");
+    }
 
     }
