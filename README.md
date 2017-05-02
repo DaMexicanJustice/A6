@@ -73,4 +73,17 @@ val mediaPlayer = MediaPlayer.create(this, R.raw.bomberman)
 mediaPlayer.start()
 ```
 
-#### 
+#### Using Media Player to play audio from the ringtone directory
+We choose whatever is set as the current tune for notications in this example to ensure it works on all platforms and not only for my emulator/phone
+```
+val ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+val mp = MediaPlayer.create(this, ringtoneUri)
+mp.start()
+```
+
+#### Playing a user-defined tune from SD card
+```
+mp = MediaPlayer()
+val path = android.os.Environment.getExternalStorageDirectory()
+mp.setDataSource(path.toString() + "urmp3filename")
+```
