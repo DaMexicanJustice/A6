@@ -89,4 +89,17 @@ mp.setDataSource(path.toString() + "urmp3filename")
 ```
 
 #### Recording audio using microphone
+Android has a list of "dangerous permissions" which pose a security risk to the user. These are:
+1. Manifest.permission.READ_CALENDAR	Read calendar events
+2. Manifest.permission.WRITE_CALENDAR	Write calendar events
+3. Manifest.permission.CAMERA	Access camera object
+4. Manifest.permission.READ_CONTACTS	Read phone contacts
+5. Manifest.permission.WRITE_CONTACTS	Write phone contacts
+6. Manifest.permission.ACCESS_FINE_LOCATION	Access precise location
+7. Manifest.permission.ACCESS_COARSE_LOCATION	Access general location
+8. **Manifest.permission.RECORD_AUDIO	Record with microphone**
+9. Manifest.permission.CALL_PHONE	Call using the dialer
+10. Manifest.permission.READ_EXTERNAL_STORAGE	Read external or SD
+11. Manifest.permission.WRITE_EXTERNAL_STORAGE
+
 Code example goes here....
