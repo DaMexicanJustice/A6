@@ -33,6 +33,14 @@ Most Android phones (well most any phone really) has 2 or more audio devices. A 
 [MediaPlayer](https://developer.android.com/guide/topics/media/mediaplayer.html) is a framework we can use when developing Android apps to play audio, video and images. It is basically a multimedia player and can handle a handful of media types. 
 We will use this to play sound utilizing our speakers.
 
+#### What we need
+The following classes are used to play sound and video in the Android framework:
+
+MediaPlayer
+This class is the primary API for playing sound and video.
+AudioManager
+This class manages audio sources and audio output on a device
+
 ### MediaRecorder
 
 [MediaRecorder](https://developer.android.com/guide/topics/media/mediarecorder.html) is a framework that allows us to record audio utilizing the microphone of our smart phones. 
