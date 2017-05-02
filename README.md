@@ -27,3 +27,16 @@ Most Android phones (well most any phone really) has 2 or more audio devices. A 
 
 ![speaker](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.carmako.nl%2Fmedia%2Fcarmako%2Fcache%2F20%2F1d%2F201dd99b29e7ae8e4dc9fdadc3ad2bbd.jpg&f=1) 
 ![microphone](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.myboyfriendgifts.com%2Fwp-content%2Fuploads%2F2015%2F01%2FIK-Multimedia-iRig-Mic-Cast-podcasting-mic-for-smartphones-and-tablets-0-1.jpg&f=1)
+
+### MediaPlayer
+
+[MediaPlayer](https://developer.android.com/guide/topics/media/mediaplayer.html) is a framework we can use when developing Android apps to play audio, video and images. It is basically a multimedia player and can handle a handful of media types. 
+We will use this to play sound utilizing our speakers.
+
+### MediaRecorder
+
+[MediaRecorder](https://developer.android.com/guide/topics/media/mediarecorder.html) is a framework that allows us to record audio utilizing the microphone of our smart phones. 
+
+### App demonstration audio recording & playing
+
+...App goes here
