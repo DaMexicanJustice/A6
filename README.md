@@ -85,7 +85,8 @@ mp.start()
 ```
 mp = MediaPlayer()
 val path = android.os.Environment.getExternalStorageDirectory()
-mp.setDataSource(path.toString() + "urmp3filename")
+val filename = "urmp3filename"
+mp.setDataSource(path.toString() + filename)
 ```
 
 #### Recording audio using microphone
