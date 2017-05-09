@@ -7,6 +7,7 @@ Patrick Johansen, Joachim Christensen
 
 ### Defining sound
 First of all whenever we work with digital sound it's called audio. Sound indicates that it is analogue (which is defined as sound which is 1 : 1 scale in relation to its source). So all sound we hear coming from biological sources such as rivers, animals etc. is considered sound, whereas a digital recreation of an analogue source is called audio. Everything you hear coming from speakers is audio.
+[source](http://www.differencebetween.info/difference-between-sound-and-audio)
 
 ### ADC vs DAC
 In order to recreate biological sound we use a process called analogue to digital conversion. 
